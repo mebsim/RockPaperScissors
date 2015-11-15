@@ -6,7 +6,6 @@ public class RockPaperScissors {
         int wins = 0;
         int losses = 0;
         int ties = 0;
-        String answerplay;
         while(run){
             System.out.println("Welcome to Rock, Paper, Scissors. If you lose three rounds you lose. If you win three rounds you win.");
             boolean game = true;
@@ -58,7 +57,7 @@ public class RockPaperScissors {
                     game = false;
                     run = false;
                 }
-                    if(wins == 3){ // first to three, if you win game ends and it asks if you want to play again
+                if(wins == 3){ // first to three, if you win game ends and it asks if you want to play again
                     game = false;
                     System.out.println("You won!");
                 }
@@ -75,7 +74,7 @@ public class RockPaperScissors {
             System.out.println("Do you want to play again?");
             Scanner scan = new Scanner(System.in);
             String playagain = scan.nextLine();
-            answerplay = playagain.toLowerCase();
+            String answerplay = playagain.toLowerCase();
             if(answerplay.equals("yes")){
                 run = true;
             }else{
