@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class RockPaperScissors {
     public static void main(String[] args) {
         boolean run = true; // starts the game
-        int wins = 0;
+        int wins = 0; // need to be out of the program so that the program resets after the game is done.
         int losses = 0;
         int ties = 0;
         while(run){
@@ -71,15 +71,24 @@ public class RockPaperScissors {
             wins = 0; // resets the wins
             losses = 0; // resets the losses
             ties = 0; // resets the ties
-            System.out.println("Do you want to play again?");
+            System.out.println("Do you want to play again?"); // Asks if the user wishes to play or exit the program
             Scanner scan = new Scanner(System.in);
             String playagain = scan.nextLine();
-            String answerplay = playagain.toLowerCase();
+            String answerplay = playagain.toLowerCase(); // allows the person to write in caps and the program to still run
             if(answerplay.equals("yes")){
                 run = true;
             }else{
                 run = false;
             }            
+            /*
+            For more specific exiting:
+            if(answerplay.equals("yes")){
+                run = true;
+            }
+            if(answerplay.equals("no")){
+                run = false;
+            }
+            */
         }
     }
 }    
