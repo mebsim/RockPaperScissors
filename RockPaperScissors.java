@@ -66,15 +66,15 @@ public class RockPaperScissors {
                     System.out.println("You lose!");
                 }
                 System.out.println("Wins: " + wins + ". Losses: " + losses + ". Ties: " + ties + ".");
-                System.out.println("------------------------------------------------"); // at the end of each round it tells you the score
+                System.out.println("------------------------------------------------"); // at the end of each round it tells you the score and also sections it off from the other rounds
                 }
             wins = 0; // resets the wins
             losses = 0; // resets the losses
             ties = 0; // resets the ties
-            System.out.println("Do you want to play again?"); // Asks if the user wishes to play or exit the program
+            System.out.println("Do you want to play again?"); // Asks the user if they wish to play again or exit the program
             Scanner scan = new Scanner(System.in);
             String playagain = scan.nextLine();
-            String answerplay = playagain.toLowerCase(); // allows the person to write in caps and the program to still run
+            String answerplay = playagain.toLowerCase(); // allows the person to write in caps and the program to still run properly
             if(answerplay.equals("yes")){
                 run = true;
             }else{
